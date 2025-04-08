@@ -18,7 +18,8 @@ pipeline {
                  docker build -t parikshitt281/backend:latest .
                  docker push parikshitt281/backend:latest
                  docker rmi parikshitt281/backend:latest
-                 kubectl apply -f ./yml/
+                 kubectl apply -f deplo.yml
+                 kubectl apply -f service.yml
                  '''
             }
         }
